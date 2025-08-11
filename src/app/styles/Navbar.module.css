@@ -1,0 +1,122 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #12372A; /* Navbar background */
+    color: white; /* Default text color */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center; /* Align logo and text horizontally */
+  }
+  
+  .logoLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline from Link */
+  }
+  
+  .logoText {
+    margin-left: 5px; /* Add 5px space between logo and text */
+    color: white; /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  
+.navLinks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navLinks li {
+    position: relative; /* Important for positioning the dropdown */
+  }
+  
+  /* Links style */
+  .navLinks a {
+    text-decoration: none;
+    color: white; /* Link color */
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navLinks a:hover {
+    color: #0070f3;
+  }
+  /* Dropdown menu styles (unchanged) */
+  .dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdownMenu li {
+    padding: 8px 20px;
+  }
+  
+  .dropdownMenu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdownMenu a:hover {
+    background-color: #0070f3;
+  }
+  
+  /* Show dropdown on hover */
+  .navLinks .dropdown:hover .dropdownMenu {
+    display: block;
+  }
+  
+  .userActions {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .userActions a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .userActions a:hover {
+    background-color: #0070f3;
+  }
+  
+  .searchBar {
+    display: flex;
+    gap: 5px; /* Set gap to 5px between items */
+    align-items: center; /* Optional: to align the items vertically centered */
+  }
+  
+  .searchBar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .searchBar button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }

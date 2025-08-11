@@ -1,0 +1,187 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Equal width for both sides */
+    max-width: 960px; /* Set a maximum width for the entire container */
+    width: 100%; /* Ensure it takes full width but not exceed max-width */
+    margin: 0 auto; /* Center the container horizontally */
+    height: 70vh; /* Set the height to 70% of the viewport height */
+    border: 2px solid #ddd; /* Add a border with a light gray color */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    padding: 0; /* Remove padding to avoid spacing between the sides */
+    background-color: #A3BA9C; /* Set color for container */
+    margin-top: 40px;
+  }
+  
+  .leftSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure it takes up the full height */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  /* Right side */
+  .rightSide {
+    max-width: 400px; /* Set a maximum width for the form */
+    width: 100%; /* Ensure it doesn't overflow */
+    margin: 0 auto; /* Center the form horizontally */
+    display: flex;
+    flex-direction: column; /* Allow vertical stacking of elements */
+    align-items: center; /* Align elements to the top of the container */
+    justify-content: flex-start; /* Align elements to the top */
+    padding: 20px; /* Optional: Add padding to prevent content touching edges */
+  }
+  
+  .leftSide img {
+    width: 100%; /* Ensure the image stretches to the full width of the container */
+    height: 100%; /* Make sure the image stretches to fill the full height */
+    object-fit: cover; /* Ensure the image covers the container without distorting */
+  }
+  
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    align-self: center; /* Ensures the heading stays at the top */
+  }
+  
+  /* signin.module.css */
+
+
+.inputGroup {
+  margin-bottom: 10px;
+}
+
+.inputGroup label {
+  display: block;
+  font-weight: 300; /* Use a lighter font weight (e.g., 300) */
+  margin-bottom: 5px;
+  font-size: 0.9rem; /* Make the font size smaller (adjust as needed) */
+  /* You can also use pixel values like: font-size: 12px; */
+}
+
+.inputGroup input {
+  width: 100%; /* Now 100% of a potentially wider .rightSide */
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* ... other styles in your file ... */
+  
+  .linkContainer {
+    text-align: right;
+  }
+  .linkContainer a {
+    font-size: 0.8rem; /* Make the font smaller (adjust as needed) */
+    font-weight: bold; /* Make the font bold */
+    color: blue; /* Set the text color to blue */
+    text-decoration: none; /* Remove the default underline */
+  }
+  
+  .signinButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #00993B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .signinButton:hover {
+    background-color: #436850;
+  }
+  
+  .signupLink {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .signupLink p a {
+    font-weight: bold; /* Make "Sign up" bold */
+    color: blue; /* Make "Sign up" blue */
+    text-decoration: underline;
+  }
+  
+  
+  .orSignIn {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .socialLogos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .socialLogos img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  /* signin.module.css */
+
+.socialLogos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.socialLogos a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.socialLogos a:hover {
+  transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+.google svg {
+  color: #DB4437; /* Google red */
+}
+
+.facebook svg {
+  color: #1877F2; /* Facebook blue */
+}
+
+.tiktok svg {
+  color: #000000; /* TikTok teal */
+}
+
+.socialLogos a svg {
+  width: 40px;
+  height: 40px;
+}
+.logoWrapper {
+  display: flex;
+  justify-content: center; /* Centers the whole container */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logoContainer {
+  display: flex; /* Arranges logo and name in a row */
+  align-items: center; /* Vertically aligns logo and name */
+  text-decoration: none;
+  color: inherit;
+}
+
+.roundLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px; /* Space between logo and name */
+}
+
+.brandName {
+  font-size: 1rem;
+  font-weight: bold;
+}

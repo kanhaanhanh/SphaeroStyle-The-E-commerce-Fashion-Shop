@@ -1,0 +1,48 @@
+.sidebar {
+    width: 20%;
+    background-color: white;
+    color: black;
+    /* padding: 20px; */
+    height: 100vh;
+    border-right: 2px solid #ddd; /* Adds a right border */
+    font-family: 'Arial', sans-serif; /* Added a more modern font for readability */
+}
+
+.sidebar h2 {
+  padding-top: 10px;
+  margin-bottom: 20px; /* As requested */
+  padding-left: 20px;  /* As requested */
+  padding-bottom: 10px; /* Adds space below the text before the border */
+  border-bottom: 2px solid #436850; /* A subtle line for separation, matching your theme */
+  color: #12372A; /* A dark green from your theme for good contrast */
+  font-weight: 600; /* Slightly bolder than normal */
+  text-transform: uppercase; /* Makes the heading stand out */
+  letter-spacing: 0.5px; /* Adds a little breathing room between letters */
+}
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar ul li {
+    margin: 10px 0;
+  }
+  .sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  .sidebar ul li a span {
+    margin-right: 10px;
+  }
+  .sidebar ul li a.active {
+    background-color: #436850;
+    padding: 10px;
+    color: white;
+    /* border-radius: 5px; */
+  }
+  .sidebar ul li a.signOut {
+    color: red;
+  }
+  

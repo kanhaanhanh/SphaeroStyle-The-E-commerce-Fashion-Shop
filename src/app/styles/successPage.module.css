@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .h2 {
+    font-size: 24px;
+    color: #28a745; /* Green */
+  }
+  
+  .p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .homeButton {
+    padding: 12px 24px;
+    background-color: #265a17; /* Orange */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .homeButton:hover {
+    background-color: #8bd27f; /* Darker Orange */
+  }
+  

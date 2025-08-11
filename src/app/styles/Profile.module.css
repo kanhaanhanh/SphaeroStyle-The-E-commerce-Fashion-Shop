@@ -1,0 +1,56 @@
+.profile {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 20px; /* Ensures the profile is near the sidebar */
+    padding: 10px;
+    font-family: 'Arial', sans-serif; /* Added a more modern font for readability */
+}
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds spacing between inputs in the same row */
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ensures equal width for inputs in the same row */
+  }
+  
+  .inputGroup label {
+    margin: 10px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; /* Added a more modern font for readability */
+  }
+  
+  .inputGroup input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif; /* Added a more modern font for readability */
+  }
+  
+  .gender {
+    margin: 20px;
+  }
+  
+  .gender label {
+    
+    font-weight: bold;
+  }
+
+
+
+  
+  .updateButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007429;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

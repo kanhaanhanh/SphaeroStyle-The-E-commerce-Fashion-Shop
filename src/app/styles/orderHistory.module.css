@@ -1,0 +1,300 @@
+/* General Layout and Container */
+.mainContent {
+  padding: 2rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  /* min-height: 80vh; -- This can be set on a parent layout component if needed */
+  display: flex; /* Enable flex for vertical stacking and height control */
+  flex-direction: column;
+  max-width: auto; /* Allow it to shrink below its content size */
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+.errorMessage {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* New: Container for the scrollable order list */
+.orderListContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures borders are rounded properly */
+  flex-grow: 1; /* Allows it to take up available vertical space */
+  min-height: 0; /* Important for flex items to shrink below their content size */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for the list block */
+}
+
+/* New: Header for the list table */
+.orderListHeader {
+  display: grid; /* Use grid for column layout */
+  grid-template-columns: 0.8fr 1fr 0.8fr 0.8fr; /* Adjust column widths as needed */
+  background-color: #e9ecef;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  color: #343a40;
+  border-bottom: 1px solid #dee2e6;
+  position: sticky; /* Make header sticky if list scrolls within its container */
+  top: 0;
+  z-index: 1; /* Ensure it stays above scrolling content */
+}
+
+.headerItem {
+  text-align: left;
+  /* Add padding if needed for internal spacing */
+}
+
+.headerItem:last-child {
+  text-align: right; /* Align "View Details" header to the right */
+}
+
+/* New: Scrollable area for order rows */
+.orderListScroll {
+  max-height: 500px; /* **CRITICAL**: Adjust this value as needed to control scroll height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  -webkit-overflow-scrolling: touch; /* Smoother scrolling on iOS */
+  padding: 0 0.5rem; /* Add horizontal padding to prevent scrollbar from touching content */
+  flex-grow: 1; /* Allow it to take up remaining space if needed for total container height */
+}
+
+/* Order Row (replaces orderCard for table-like look) */
+.orderRow {
+  display: grid; /* Use grid for column layout */
+  grid-template-columns: 0.8fr 1fr 0.8fr 0.8fr; /* Match header column widths */
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0; /* Subtle row separator */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  align-items: center; /* Vertically align content in the row */
+}
+
+.orderRow:hover {
+  background-color: #f6f6f6;
+  transform: translateX(3px); /* Subtle shift on hover */
+}
+
+.orderRow:last-child {
+  border-bottom: none; /* No border for the last row */
+}
+
+.orderDataItem {
+  text-align: left;
+  color: #343a40;
+  font-size: 0.95rem;
+  /* Add padding if needed for internal spacing */
+}
+
+.orderDataItem strong {
+  font-weight: 600;
+  color: #007bff; /* Highlight order ID */
+}
+
+.orderDataItem:last-child {
+  text-align: right; /* Align "View Details" to the right */
+}
+
+.viewDetail {
+  color: #007bff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap; /* Prevent "View Details" from wrapping */
+}
+
+.viewDetail:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+
+/* Modal Styling */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* This targets the modal when the data-active attribute is true */
+.modalOverlay[data-active="true"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.modal {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 650px;
+  width: 90%;
+  overflow-y: auto;
+  max-height: 90vh;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transform: translateY(-20px); /* Initial position for animation */
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* This targets the modal itself when the data-active attribute is true on its parent overlay */
+.modalOverlay[data-active="true"] .modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.modalHeader h3 {
+  font-size: 1.8rem;
+  color: #343a40;
+  margin: 0;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.closeBtn:hover {
+  color: #343a40;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detailGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1rem;
+  color: #495057;
+}
+
+.detailGroup strong {
+  color: #212529;
+  min-width: 150px;
+}
+
+.modalSeparator {
+  border: 0;
+  border-top: 1px dashed #ced4da;
+  margin: 1.5rem 0;
+}
+
+.modal h4 {
+  font-size: 1.4rem;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.itemRow {
+  background-color: #fefefe;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.itemRow p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #343a40;
+}
+
+.itemDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  /* min-height: calc(100vh - 100px); adjust based on your footer height */
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  /* Flexbox properties for the container */
+  display: flex; /* Enables flex container */
+  justify-content: space-around; /* Distributes space around items */
+  /* Or use gap for spacing: gap: 1rem; */
+  align-items: flex-start; /* Aligns items to the start of the cross axis (top) */
+  flex-wrap: wrap; /* Allows items to wrap to the next line if they don't fit */
+}
+
+
+.status {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status.Pending {
+  color: orange;
+}
+.status.Processing {
+  color: blue;
+}
+.status.Shipped {
+  color: purple;
+}
+.status.Delivered {
+  color: green;
+}
+.status.Cancelled {
+  color: red;
+}

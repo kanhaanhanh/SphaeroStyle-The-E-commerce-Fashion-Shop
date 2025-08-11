@@ -1,0 +1,100 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Equal width for both sides */
+    max-width: 960px; /* Set a maximum width for the entire container */
+    width: 100%; /* Ensure it takes full width but not exceed max-width */
+    margin: 0 auto; /* Center the container horizontally */
+    height: 70vh; /* Set the height to 70% of the viewport height */
+    border: 2px solid #ddd; /* Add a border with a light gray color */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    padding: 0; /* Remove padding to avoid spacing between the sides */
+    background-color: #A3BA9C; /* Set color for container */
+  }
+  
+  .leftSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure it takes up the full height */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .rightSide {
+    max-width: 400px; /* Set a maximum width for the form */
+    width: 100%; /* Ensure it doesn't overflow */
+    margin: 0 auto; /* Center the form horizontally */
+    display: flex;
+    flex-direction: column; /* Allow vertical stacking of elements */
+    align-items: center; /* Align elements to the top of the container */
+    justify-content: flex-start; /* Align elements to the top */
+    padding: 20px; /* Optional: Add padding to prevent content touching edges */
+  }
+  
+  .leftSide img {
+    width: 100%; /* Ensure the image stretches to the full width of the container */
+    height: 100%; /* Make sure the image stretches to fill the full height */
+    object-fit: cover; /* Ensure the image covers the container without distorting */
+  }
+  
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    align-self: center; /* Ensures the heading stays at the top */
+  }
+  
+  .inputGroup {
+    margin-bottom: 15px;
+  }
+  
+  .inputGroup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .inputGroup input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .linkContainer {
+    text-align: right;
+  }
+  
+  .signinButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .signupLink {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .orSignIn {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .socialLogos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .socialLogos img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  

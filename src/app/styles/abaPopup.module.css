@@ -1,0 +1,177 @@
+/* src/app/styles/abaPopup.module.css */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup {
+    background: #fff;
+    border-radius: 8px;
+    width: 600px; /* Adjust as needed */
+    max-width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative; /* For positioning child elements */
+  }
+  
+  .popupHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    background-color: #f7f7f7;
+  }
+  
+  .backButton {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .backButton svg {
+    margin-right: 0.5rem;
+  }
+  
+  .time {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .time svg {
+    margin-right: 0.3rem;
+  }
+  
+  .popupContent {
+    display: flex;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+  
+  .left {
+    flex: 1;
+  }
+  
+  .shoppingHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .shoppingHeader h3 {
+    margin: 0;
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .storeName {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1.5rem;
+  }
+  
+  .amountToPay {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .amountToPay p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .amountToPay h2 {
+    margin: 0.5rem 0 0;
+    font-size: 1.8rem;
+    color: #000;
+  }
+  
+  .summaryItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .summaryTotal {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.8rem;
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .summaryTotal .summaryValue {
+    color: #000;
+  }
+  
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Example background for QR area */
+    border-radius: 4px;
+    padding: 1rem;
+    min-width: 250px; /* Ensure QR area has enough space */
+  }
+  
+  .qrCodeContainer {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .qrCodeContainer img {
+    display: block; /* Remove extra space below image */
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .scanInstruction {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.8rem;
+  }
+
+  .payButton {
+    background-color: #1f9c54;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .payButton:hover {
+    background-color: #157c42;
+  }
+  
